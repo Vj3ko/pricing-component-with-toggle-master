@@ -1,22 +1,21 @@
-const slider = document.querySelector("#checkbox");
-const annually = document.querySelector(".annually");
-const monthly = document.querySelector(".monthly");
+const checkbox = document.querySelector("#checkbox");
 const lowPrice = document.querySelectorAll(".lower-price");
 const bigPrice = document.querySelectorAll(".bigger-price");
 
 function check() {
+      const annually = document.querySelector(".annually");
+      const monthly = document.querySelector(".monthly");
 
-      if (slider.checked == true) {
-            monthly.classList.add("active")
-            annually.classList.remove("active")
+      if (checkbox.checked == true) {
+            monthly.classList.toggle("active", true)
+            annually.classList.toggle("active", false)
             lowerPrice()
 
       } else {
-            annually.classList.add("active")
-            monthly.classList.remove("active")
+            annually.classList.toggle("active", true)
+            monthly.classList.toggle("active", false)
             biggerPrice()
       }
-
 }
 
 function lowerPrice() {
@@ -39,4 +38,4 @@ function biggerPrice() {
       }
 }
 
-slider.addEventListener("change", check)
+checkbox.addEventListener("change", check);

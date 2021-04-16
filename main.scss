@@ -12,17 +12,11 @@
 
 //  variables
 
-:root {
-      --lin-grad: linear-gradient(
-            90deg,
-            hsl(236, 72%, 79%),
-            hsl(237, 63%, 64%)
-      );
-      --v_lt_Gray_Blue: hsl(240, 78%, 98%);
-      --lt_Gray_Blue: hsl(234, 14%, 74%);
-      --gray_Blue: hsl(233, 13%, 49%);
-      --dk_Gray_blue: hsl(232, 13%, 33%);
-}
+$lin_grad: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$v_lt_Gray_Blue: hsl(240, 78%, 98%);
+$lt_Gray_Blue: hsl(234, 14%, 74%);
+$gray_Blue: hsl(233, 13%, 49%);
+$dk_Gray_Blue: hsl(232, 13%, 33%);
 
 // global styles
 
@@ -34,14 +28,14 @@ body {
       font-size: 1.6rem;
       font-family: "Montserrat", sans-serif;
       background: url(./images/bg-top.svg),
-            url(./images/bg-bottom.svg) var(--v_lt_Gray_Blue);
+            url(./images/bg-bottom.svg) $v_lt_Gray_Blue;
       background-size: 100%, 0%;
       background-repeat: no-repeat;
       background-position: top -3.7rem right -19rem, bottom left;
 
       @media (min-width: 62.5rem) {
             background: url(./images/bg-top.svg),
-                  url(./images/bg-bottom.svg) var(--v_lt_Gray_Blue);
+                  url(./images/bg-bottom.svg) $v_lt_Gray_Blue;
             background-size: 28%, 23%;
             background-repeat: no-repeat;
             background-position: top right, bottom left;
@@ -52,7 +46,7 @@ body {
 
 .main {
       width: 100%;
-      height: 100vh;
+      min-height: 100vh;
       max-width: 40rem;
       margin: auto;
       display: flex;
@@ -74,7 +68,7 @@ body {
             .header {
                   &__title {
                         font-size: 3.2rem;
-                        color: var(--gray_Blue);
+                        color: $gray_Blue;
                   }
 
                   &__options {
@@ -86,18 +80,15 @@ body {
 
                         span {
                               font-size: 1.5rem;
-                              color: var(--lt_Gray_Blue);
+                              color: $lt_Gray_Blue;
                               transition: 300ms linear;
                         }
 
                         span.active {
-                              color: var(--gray_Blue);
+                              color: $gray_Blue;
                         }
 
                         .checkbox-container {
-                              display: flex;
-                              align-items: center;
-
                               &:hover {
                                     opacity: 0.7;
                               }
@@ -106,7 +97,7 @@ body {
                                     display: flex;
                                     width: 6rem;
                                     height: 3rem;
-                                    background: var(--lin-grad);
+                                    background: $lin_grad;
                                     border-radius: 5rem;
                                     position: relative;
                                     cursor: pointer;
@@ -120,7 +111,7 @@ body {
                                           left: 0.3rem;
                                           transform: translateY(-50%);
                                           cursor: pointer;
-                                          background: var(--v_lt_Gray_Blue);
+                                          background: $v_lt_Gray_Blue;
                                           border-radius: 5rem;
                                           box-shadow: 0 0.2rem 0.5rem 0
                                                 rgba(0, 0, 0, 0.3);
@@ -131,6 +122,7 @@ body {
                               & input[type="checkbox"] {
                                     cursor: pointer;
                                     opacity: 0;
+                                    position: absolute;
                               }
 
                               & input[type="checkbox"]:focus + label::before {
@@ -152,10 +144,10 @@ body {
 
                   &__card {
                         padding: 3rem;
-                        background: var(--v_lt_Gray_Blue);
+                        background: $v_lt_Gray_Blue;
                         border-radius: 1rem;
                         margin-top: 3rem;
-                        color: var(--dk_Gray_blue);
+                        color: $dk_Gray_Blue;
                         box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.2);
                         max-width: 35rem;
 
@@ -168,19 +160,19 @@ body {
                                     hsl(236, 72%, 79%),
                                     hsl(237, 63%, 64%)
                               );
-                              color: var(--v_lt_Gray_Blue);
+                              color: $v_lt_Gray_Blue;
 
                               @media (min-width: 62.5rem) {
                                     transform: scaleY(1.1) scaleX(1.05);
                               }
 
                               .card-btn {
-                                    background: var(--v_lt_Gray_Blue);
+                                    background: $v_lt_Gray_Blue;
                                     color: hsl(237, 63%, 64%);
 
                                     &:hover,
                                     &:focus {
-                                          color: var(--v_lt_Gray_Blue);
+                                          color: $v_lt_Gray_Blue;
                                     }
                               }
                         }
@@ -192,7 +184,7 @@ body {
 
                         .pricing {
                               padding: 3rem 0;
-                              border-bottom: 0.1rem solid var(--lt_Gray_Blue);
+                              border-bottom: 0.1rem solid $lt_Gray_Blue;
                               display: flex;
                               align-items: center;
                               justify-content: center;
@@ -203,7 +195,11 @@ body {
                               }
 
                               strong {
-                                    font-size: 6.7rem;
+                                    font-size: 5.7rem;
+
+                                    @media (min-width: 62.5rem) {
+                                          font-size: 6.7rem;
+                                    }
                               }
 
                               .lower-price {
@@ -219,8 +215,7 @@ body {
                               .list-item {
                                     font-size: 1.5rem;
                                     padding: 2rem;
-                                    border-bottom: 0.1rem solid
-                                          var(--lt_Gray_Blue);
+                                    border-bottom: 0.1rem solid $lt_Gray_Blue;
                               }
                         }
 
@@ -229,13 +224,13 @@ body {
                               display: inline-block;
                               padding: 1.5rem 0;
                               width: 100%;
-                              background: var(--lin-grad);
-                              color: var(--v_lt_Gray_Blue);
+                              background: $lin_grad;
+                              color: $v_lt_Gray_Blue;
                               text-transform: uppercase;
                               font-size: 1.3rem;
                               letter-spacing: 0.1rem;
                               border-radius: 1rem;
-                              border: 1px solid var(--lt_Gray_Blue);
+                              border: 1px solid $lt_Gray_Blue;
 
                               &:hover,
                               &:focus {
