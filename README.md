@@ -1,6 +1,6 @@
 # Frontend Mentor - Pricing component with toggle solution
 
-This is a solution to the [Pricing component with toggle challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Pricing component with toggle challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### The challenge
 
@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/mobile-first-pricing-component-toggle-html-scss-js-vgCy9bBnD
 - Live Site URL: https://pricing-component-with-toggle-master-theta.vercel.app/
 
 ## My process
@@ -24,7 +24,6 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - JS
-
 
 ## Author
 

@@ -144,7 +144,7 @@ body {
 
                   &__card {
                         padding: 3rem;
-                        background: $v_lt_Gray_Blue;
+                        background: #fff;
                         border-radius: 1rem;
                         margin-top: 3rem;
                         color: $dk_Gray_Blue;
@@ -160,7 +160,7 @@ body {
                                     hsl(236, 72%, 79%),
                                     hsl(237, 63%, 64%)
                               );
-                              color: $v_lt_Gray_Blue;
+                              color: #fff;
 
                               @media (min-width: 62.5rem) {
                                     transform: scaleY(1.1) scaleX(1.05);

@@ -153,7 +153,7 @@ body {
 
 .main .wrapper .content__card {
   padding: 3rem;
-  background: #f6f6fe;
+  background: #fff;
   border-radius: 1rem;
   margin-top: 3rem;
   color: #494c5f;
@@ -172,7 +172,7 @@ body {
 .main .wrapper .content__card.pro {
   background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(#a3a8f0, #696fdd);
-  color: #f6f6fe;
+  color: #fff;
 }
 
 @media (min-width: 62.5rem) {
